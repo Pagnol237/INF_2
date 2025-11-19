@@ -1,5 +1,7 @@
 package src.main.java.com.pagnol.formation;
 
+import java.util.List;
+
 public class Main {
     public static void testMethode(int a, int b,Operation op){
         var result = op.appliquer(a,b);
@@ -16,6 +18,14 @@ public class Main {
         //avec lamda
         testMethode(10,10,(a,b)->{return a+b;});
 
+        Etudiant user1 =new Etudiant("John","Doe",25);
+        Etudiant	user2 =new Etudiant("Jane","eric",30);
+        Etudiant	user3 =new Etudiant("patric","gerard",18);
+        Etudiant	user4 =new Etudiant("Stephane","eric",30);
+        Etudiant	user5 =new Etudiant("Elie","martial",15);
+
+        List<Etudiant> student = List.of(user1,user2,user3,user4,user5);
+        student.stream().sorted()
 
     }
 

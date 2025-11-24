@@ -1,17 +1,25 @@
-package com.pagnol.formation;
+package src.main.java.com.pagnol.formation;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/*
+Exercice 1 : Boîte générique
+
+Crée une classe générique Boite<T> qui peut contenir un objet de type T.
+
+Ajoute une méthode pour mettre un objet dans la boîte.
+
+Ajoute une méthode pour récupérer l’objet.
+
+Écris une méthode afficherBoite qui accepte n’importe quelle boîte (Boite<?>) et affiche son contenu.
+
+Question :
+
+Teste afficherBoite avec une Boite<String> et une Boite<Integer>.
+
+*/
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Boite<String> boite1 = new Boite<>("bonjour");
+        boite1.setElement("bonsoir");
+        Boite.afficheBoite(boite1);
     }
 }
